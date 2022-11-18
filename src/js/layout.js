@@ -4,8 +4,12 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+// import { Single } from "./views/single";
+import { SingleCharacter } from "./views/singleCharacter";
+import { SingleVehicle } from "./views/singleVehicle.jsx";
 import injectContext from "./store/appContext";
+
+
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -28,11 +32,17 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						{/* <Route exact path="/SingleCharacter">
+							<SingleCharacter />
+						</Route> */}
+						<Route exact path="/SingleVehicle/:theid">
+							<SingleVehicle />
+						</Route>
+						<Route exact path="/SingleCharacter/:theid"> 
+							<SingleCharacter />
 						</Route>
 						<Route>
-							<h1>Not found!</h1>
+							<h1>QUE CARAJOS PASÓ :(!</h1>
 						</Route>
 					</Switch>
 					<Footer />
@@ -43,3 +53,11 @@ const Layout = () => {
 };
 
 export default injectContext(Layout);
+
+{/* <Route exact path="/single/:theid"></Route> */}
+
+{/* <Route exact path="/singleCharacter">
+							<singleCharacter />
+						</Route>
+						<Route exact path="/singleVehicle> */}
+
